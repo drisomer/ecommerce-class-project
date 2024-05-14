@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="productstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Products</h1>
+        <div class="filter">
+            <select id="productFilter" onchange="filterProducts()">
+                <option value="all">All Products</option>
+                <option value="featured">Featured Products</option>
+                <option value="new">New Arrivals</option>
+                <option value="shop">Shop</option>
+            </select>
+        </div>
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be loaded here dynamically -->
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+</body>
+</html>

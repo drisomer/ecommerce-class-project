@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Product Interface</title>
+    <link rel="stylesheet" href="add_productstyle.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Product Interface</h1>
+        
+        <!-- Form for adding new product -->
+        <form id="add-product-form" action="add_product.php" method="POST">
+            <h2>Add New Product</h2>
+            <input type="text" name="name" placeholder="Product Name" required>
+            <input type="text" name="product_brand" placeholder="Product Brand" required>
+            <input type="number" name="price" placeholder="Price" step="0.01" required>
+            <textarea name="description" placeholder="Description" required></textarea>
+            <input type="text" name="image_url" placeholder="Image URL" required>
+            <input type="hidden" name="created_at" value="<?php echo date('Y-m-d H:i:s'); ?>">
+            <input type="hidden" name="updated_at" value="<?php echo date('Y-m-d H:i:s'); ?>">
+ 
+            <select name="section" required>
+                <option value="" disabled selected>Select Section</option>
+                <option value="header">Header</option>
+                <option value="featured">Featured Products</option>
+                <option value="arrival">New Arrival</option>
+                <option value="newsletter">Newsletter</option>
+                <option value="footer">Footer</option>
+            </select>
+            <input type="submit" value="Add Product">
+        </form>
+
+        <!-- Form for editing existing product -->
+        <form id="edit-product-form">
+            <h2>Edit Product</h2>
+            <select id="edit-product-select" required>
+                <option value="" disabled selected>Select Product to Edit</option>
+                <!-- Product options will be dynamically populated here -->
+            </select>
+            <input type="text" id="edit-name" name="name" placeholder="Product Name" required>
+            <input type="text" id="edit-product_brand" name="product_brand" placeholder="Product Brand" required>
+            <input type="number" id="edit-price" name="price" placeholder="Price" step="0.01" required>
+            <textarea id="edit-description" name="description" placeholder="Description" required></textarea>
+            <input type="text" id="edit-image_url" name="image_url" placeholder="Image URL" required>
+            <input type="submit" value="Update Product">
+        </form>
+
+        <!-- Form for deleting existing product -->
+        <form id="delete-product-form">
+            <h2>Delete Product</h2>
+            <select id="delete-product-select" required>
+                <option value="" disabled selected>Select Product to Delete</option>
+                <!-- Product options will be dynamically populated here -->
+            </select>
+            <input type="submit" value="Delete Product">
+        </form>
+
+        <!-- Product list -->
+        <h2>Product List</h2>
+        <ul class="product-list" id="product-list">
+            <!-- Product items will be dynamically populated here -->
+        </ul>
+    </div>
+
+    <script src="add_product.js"></script> <!-- JavaScript for handling form submissions and AJAX requests -->
+</body>
+</html>

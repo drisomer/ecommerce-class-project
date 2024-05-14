@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Customers</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+        }
+        
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50; /* Green */
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+        
+        nav ul li a.active {
+            background-color: #008CBA; /* Blue */
+        }
+        
+        nav ul li a.active:hover {
+            background-color: #0077A3; /* Darker Blue */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+     <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <!-- Add the active class to highlight the current page in the navbar -->
+            <li><a href="customers.html" class="active">Customers</a></li>
+            <li><a href="Message.html" class="active">Messages</a></li>
+            <li><a href="Settings.html">Settings</a></li>
+            <!-- Other navbar items -->
+        </ul>
+    </nav>
+
+<h4>Customer Informations</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Full Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody id="user-table-body">
+        <!-- User information will be dynamically inserted here -->
+    </tbody>
+</table>
+
+<script src="fetchUsers.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Express Store</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* Comment form */
+#commentForm {
+    margin-top: 20px;
+  }
+  
+  #commentText {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allow vertical resizing */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  #commentText:focus {
+    outline: none; /* Remove outline when textarea is focused */
+  }
+  
+  #commentForm button[type="submit"] {
+    background-color: #007bff; /* Blue color for the button */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  #commentForm button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+  }
+  
+        </style>
+    </head>
+
+    <body>
+        <section id="header">
+            <a href="#"><img src="image/log11.png" class="logo" alt=""></a>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a class="active"  href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+                    <a href="#" id="close"><i class="fa fa-times"></i></a>
+                    
+
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
+                <i id="bar" class="fa    fa-outdent"></i>
+                
+            </div>
+        </section>
+        <section id="page-header" class="blog-header">
+            
+            <h2>Learn more</h2>
+            <p> Start shopping with express store today and enjoy same product delivery!</p>
+        </section>
+
+        <section id="blog">
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="image/blog/b4.jpg" alt="">
+                </div>
+                <div class="blog-details">
+                    <h4>Try-On April Trend</h4>
+                    <p> One thing i love about this blogging adventure of mine is that it has me
+                        trying out retailers that i haven't in years. There really isn't a particular reason 
+                        why i haven't shopped at Express Stores since getting married, 
+                        but I am excited that my kids has reunited us in this month with Express store [...]
+                    </p>
+                    <a href="#">READ MORE</a>
+                     <!-- Comment form -->
+
+                        <form id="commentForm" action="blog_comment.php" method="post">
+                            <input type="hidden" name="postId" value="1"> <!-- Add a hidden input field for postId -->
+                            <textarea id="comment" name="comment" placeholder="Write your comment here" required></textarea>
+                            <button type="submit" name="submit_comment">Post Comment</button>
+                        </form>
+
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="image/blog/b2.jpg" alt="">
+                </div>
+                <div class="blog-details">
+                    <h4>Retrol Fashion</h4>
+                    <p> One thing i love about this blogging adventure of mine is that it has me
+                        trying out retailers that i haven't in years. There really isn't a particular reason 
+                        why i haven't shopped at Express Stores since getting married, 
+                        but I am excited that my kids has reunited us in this month with Express store [...]
+                    </p>
+                    <a href="#">READ MORE</a>
+                         <!-- Comment form -->
+                         <form id="commentForm" action="blog_comment.php" method="post">
+                            <input type="hidden" name="postId" value="3"> <!-- Add a hidden input field for postId -->
+                            <textarea id="comment" name="commentText" placeholder="Write your comment here" required></textarea>
+                            <button type="submit" name="submit_comment">Post Comment</button>
+                        </form>
+
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="image/blog/b1.jpg" alt="">
+                </div>
+                <div class="blog-details">
+                    <h4>Clasic Fashion Style</h4>
+                    <p> One thing i love about this blogging adventure of mine is that it has me
+                        trying out retailers that i haven't in years. There really isn't a particular reason 
+                        why i haven't shopped at Express Stores since getting married, 
+                        but I am excited that my kids has reunited us in this month with Express store [...]
+                    </p>
+                    <a href="#">READ MORE</a>
+                        <!-- Comment form -->
+                        <form id="commentForm" action="blog_comment.php" method="post">
+                            <input type="hidden" name="postId" value="3"> <!-- Add a hidden input field for postId -->
+                            <textarea id="comment" name="commentText" placeholder="Write your comment here" required></textarea>
+                            <button type="submit" name="submit_comment">Post Comment</button>
+                        </form>
+
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="image/blog/b6.jpg" alt="">
+                </div>
+                <div class="blog-details">
+                    <h4>Try-On April Trend</h4>
+                    <p> One thing i love about this blogging adventure of mine is that it has me
+                        trying out retailers that i haven't in years. There really isn't a particular reason 
+                        why i haven't shopped at Express Stores since getting married, 
+                        but I am excited that my kids has reunited us in this month with Express store [...]
+                    </p>
+                    <a href="#">READ MORE</a>
+                        <!-- Comment form -->
+                        <form id="commentForm" action="blog_comment.php" method="post">
+                            <input type="hidden" name="postId" value="4"> <!-- Add a hidden input field for postId -->
+                            <textarea id="comment" name="commentText" placeholder="Write your comment here" required></textarea>
+                            <button type="submit" name="submit_comment">Post Comment</button>
+                        </form>
+
+                </div>
+            </div>
+            <div class="blog-box">
+                <div class="blog-img">
+                    <img src="image/blog/b1.jpg" alt="">
+                </div>
+                <div class="blog-details">
+                    <h4>Elegant Style</h4>
+                    <p> One thing i love about this blogging adventure of mine is that it has me
+                        trying out retailers that i haven't in years. There really isn't a particular reason 
+                        why i haven't shopped at Express Stores since getting married, 
+                        but I am excited that my kids has reunited us in this month with Express store [...]
+                    </p>
+                    <a href="#">READ MORE</a>
+                     <!-- Comment form -->
+                        <form id="commentForm" action="blog_comment.php" method="post">
+                            <input type="hidden" name="postId" value="5"> <!-- Add a hidden input field for postId -->
+                            <textarea id="comment" name="commentText" placeholder="Write your comment here" required></textarea>
+                            <button type="submit" name="submit_comment">Post Comment</button>
+                        </form>
+
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section id="pagination" class="section-p1">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#"><i class="fa fa-arrow-right"></i></a>
+        </section>
+
+        <section id="newletter" class="section-p1" class="section-m1">
+            <div class="newstext">
+                <h4>Sign Up For Our New Letters </h4>
+                <p>Get update & info on our new products, shops near you and <span> special offers.</span></p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your email address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col">
+                <img clas="logo" src="image/log11.png">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> 1111 RAM Center, East Fordham Road, Bronx, New York</p>
+                <p><strong>Phone:</strong> +1 (171)-000-111/(+123)-000-111-222</p>
+                <p><strong>Hours:</strong> 9:00 am - 11 pm, Mon - Sun</p>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-youtube "></i>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h>About</h>
+                <a href="#">About us</a>
+                <a href="#">Delivery Infomation</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact us</a>
+            </div>
+            <div class="col">
+                <h>User Account</h>
+                <a href="#">Sign In</a>
+                <a href="#">View cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track Order</a>
+                <a href="#">Help</a>
+            </div>
+
+            <div class="col install" >
+                <h4>Install App</h4>
+                <p>From Apple Store or Google Playstore</p>
+                <div class="row">
+                    <img src="image/pay/app.jpg" alt="">
+                    <img src="image/pay/play.jpg" alt="">
+                </div>
+                <p><strong>Payment Gateways</strong></p>
+                <img src="image/pay/pay.png" alt="">
+            </div>
+            <div class="copyright">
+                <p>@ 2024, Express Stores</p>
+            </div>
+        </footer>
+    </body>
+    <script src="script.js"></script>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Express Store</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <section id="header">
+            <a href="#"><img src="image/log11.png" class="logo" alt=""></a>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active"  href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+                    <a href="#" id="close"><i class="fa fa-times"></i></a>
+                    
+
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
+                <i id="bar" class="fa    fa-outdent"></i>
+                
+            </div>
+        </section>
+
+        <section id="productdetails" class="section-p1">
+            <div class="single-pro-image">
+                <img src="image/shop-header-images/shop_products/nat1.3.jpeg"  width="100%" id="Main-image"  alt="">
+                <div class="small-image-group"> 
+                    <div class="small-image-col">
+                        <img src="image/shop-header-images/shop_products/n2.webp" width="100%" class="small-image"  alt="">
+                    </div>
+                    <div class="small-image-col">
+                        <img src="image/shop-header-images/shop_products/nat1.2.jpeg" width="100%" class="small-image"  alt="">
+                    </div>
+                    <div class="small-image-col">
+                        <img src="image/shop-header-images/shop_products/n3.webp" width="100%" class="small-image"  alt="">
+                    </div>
+                    <div class="small-image-col">
+                        <img src="image/shop-header-images/shop_products/n4.webp" width="100%" class="small-image"  alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="single-product-details">
+                <h6>Home /9ja Wears</h6>
+                <h4>Men's Fashion</h4>
+                <h2>$99</h2>
+                <select> 
+                    <option>Select Size</option>
+                    <option>Small</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+                <input type="number" value="0">
+
+                <button id="addToCartBtn" class="normal" onclick="addToCart('9ja Wears', 99, 'image/shop-header-images/shop_products/nat1.3.jpeg')">Add To Cart</button>
+                
+                <h4>Product Details</h4>
+                <span>This African men outfits use to patchwork with sequins,shown men's fashionable,combine the characteristics of traditional men African clothing to meet individual needs;
+                    It will make you look attractive in all kinds of occasions.
+                    100% polyester,The fabric is soft and friendly for skin. This Nigeria attire supports personalized customization</span>
+            </div>
+        </section>
+
+        <section id="product1"  class="section-p1">
+            <h2>Featured Products</h2>
+            <p>2024 Nigeria Native Attire Collections Design</p>
+            <div class="pro-container">
+               
+               
+                <div class="pro">
+                    <img src="image/shop-header-images/shop_products/nw5.jpeg" alt="">
+                    <div class="des">
+                        <span>Ali&Jay</span>
+                        <h5>One Shoulder Ring</h5>
+                        <div class="star">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <h4>$149.99</h4>
+                    </div>
+                    <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="image/shop-header-images/shop_products/nw4.jpeg" alt="">
+                    <div class="des">
+                        <span>Ali&Jay</span>
+                        <h5>Geometric Pattern</h5>
+                        <div class="star">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <h4>$139.99</h4>
+                    </div>
+                    <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro">
+                    <img src="image/shop-header-images/shop_products/nw3.jpeg" alt="">
+                    <div class="des">
+                        <span>Ali&Jay</span>
+                        <h5>Floral Print Suit</h5>
+                        <div class="star">
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <h4>$139.99</h4>
+                    </div>
+                    <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+                </div>
+                
+                
+
+            </div>
+        </section>
+   
+
+        <section id="newletter" class="section-p1" class="section-m1">
+            <div class="newstext">
+                <h4>Sign Up For Our New Letters </h4>
+                <p>Get update & info on our new products, shops near you and <span> special offers.</span></p>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Your email address">
+                <button class="normal">Sign Up</button>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col">
+                <img clas="logo" src="image/log11.png">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> 1111 RAM Center, East Fordham Road, Bronx, New York</p>
+                <p><strong>Phone:</strong> +1 (171)-000-111/(+123)-000-111-222</p>
+                <p><strong>Hours:</strong> 9:00 am - 11 pm, Mon - Sun</p>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-youtube "></i>                     
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h>About</h>
+                <a href="#">About us</a>
+                <a href="#">Delivery Infomation</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact us</a>
+            </div>
+            <div class="col">
+                <h>User Account</h>
+                <a href="#">Sign In</a>
+                <a href="#">View cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track Order</a>
+                <a href="#">Help</a>
+            </div>
+
+            <div class="col install" >
+                <h4>Install App</h4>
+                <p>From Apple Store or Google Playstore</p>
+                <div class="row">
+                    <img src="image/pay/app.jpg" alt="">
+                    <img src="image/pay/play.jpg" alt="">
+                </div>
+                <p><strong>Payment Gateways</strong></p>
+                <img src="image/pay/pay.png" alt="">
+            </div>
+            <div class="copyright">
+                <p>@ 2024, Express Stores</p>
+            </div>
+        </footer>
+
+        
+        <script>
+            var Main_image = document.getElementById("Main-image");
+            var small_image = document.getElementsByClassName("small-image");
+
+            small_image[0].onclick = function(){
+                Main_image.src = small_image[0].src;
+            }
+            small_image[1].onclick = function(){
+                Main_image.src = small_image[1].src;
+            }
+            small_image[2].onclick = function(){
+                Main_image.src = small_image[2].src;
+            }
+            small_image[3].onclick = function(){
+                Main_image.src = small_image[3].src;
+            }
+            small_image[4].onclick = function(){
+                Main_image.src = small_image[4].src;
+            }
+        </script>
+
+        
+        <!--script>
+            // Function to add items to the shopping cart
+            function addToCart(productName, price, imageUrl) {
+                // Create an object representing the item to be added to the cart
+                var item = {
+                    productName: productName,
+                    price: price,
+                    imageUrl: imageUrl
+                };
+
+                // Retrieve existing cart items from localStorage or initialize an empty array
+                var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+                // Add the new item to the cartItems array
+                cartItems.push(item);
+
+                // Store the updated cartItems array back in localStorage
+                localStorage.setItem('cart', JSON.stringify(cartItems));
+
+                // Optionally, you can display a message confirming the addition of the item
+                alert(productName + " added to cart!");
+            }
+        </script-->
+
+
+    </body>
+    <script src="cartscript.js"></script>
+    <script src="script.js"></script>
+</html>

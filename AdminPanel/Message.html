@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Messages</title>
+    <style>
+        /* Navbar styles */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            /*background-color: #333; Dark background color */
+        }
+
+        nav ul li {
+            display: inline;
+        }
+        
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50; /* Green */
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+        
+        nav ul li a.active {
+            background-color: #008CBA; /* Blue */
+        }
+        
+        nav ul li a.active:hover {
+            background-color: #0077A3; /* Darker Blue */
+        }
+       
+        /* Main content container */
+        .container {
+            margin: 20px;
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2; /* Light gray background color for table header */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <!-- Add the active class to highlight the current page in the navbar -->
+            <li><a href="Message.html" class="active">Messages</a></li>
+            <li><a href="Settings.html">Settings</a></li>
+            <!-- Other navbar items -->
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container">
+       
+        <!-- Table to display messages -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                   <!---- <th>Date/Time</th>-->
+                </tr>
+            </thead>
+            <tbody id="messageTableBody">
+                <?php include 'Message.php'; ?>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Include your JavaScript file for fetching and displaying messages -->
+    <script src="message.js"></script>
+</body>
+</html>

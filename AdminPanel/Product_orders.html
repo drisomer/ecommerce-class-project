@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- Head content -->
+    <!--link rel="stylesheet" href="style.css"-->
+    <!-- Include any other CSS files if needed -->
+    <style>
+        /* Global styles */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+        }
+        
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50; /* Green */
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+        
+        nav ul li a.active {
+            background-color: #008CBA; /* Blue */
+        }
+        
+        nav ul li a.active:hover {
+            background-color: #0077A3; /* Darker Blue */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+a {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+thead th {
+    padding: 10px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody td {
+    padding: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+     <!-- Navbar -->
+     <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <!-- Add the active class to highlight the current page in the navbar -->
+            <li><a href="Product_orders.html" class="active">Orders</a></li>
+            <li><a href="customers.html" class="active">Customers</a></li>
+            <li><a href="Message.html" class="active">Messages</a></li>
+            <li><a href="Settings.html">Settings</a></li>
+            <!-- Other navbar items -->
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Customers Received Order</h2>
+        <a href="Product_orders.php" target="_blank">View Orders</a>
+        <!-- Add more links/buttons for other functionalities if needed -->
+    </div>
+</body>
+</html>

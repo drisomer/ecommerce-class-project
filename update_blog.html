@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content -->
+</head>
+<body>
+    <!-- Your header section -->
+    
+    <section id="page-header" class="blog-header">
+        <h2>Learn more</h2>
+        <p>Start shopping with express store today and enjoy same product delivery!</p>
+    </section>
+
+    <section id="blog">
+        <?php
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                ?>
+                <div class="blog-box">
+                    <div class="blog-img">
+                        <img src="uploads/<?php echo $row['image']; ?>" alt="">
+                    </div>
+                    <div class="blog-details">
+                        <h4><?php echo $row['title']; ?></h4>
+                        <p><?php echo $row['content']; ?></p>
+                        <a href="#">READ MORE</a>
+                        <!-- Comment form -->
+                        <form id="commentForm" action="blog_comment.php" method="post">
+                            <input type="hidden" name="postId" value="<?php echo $row['id']; ?>">
+                            <textarea id="comment" name="commentText" placeholder="Write your comment here" required></textarea>
+                            <button type="submit" name="submit_comment">Post Comment</button>
+                        </form>
+                    </div>
+                </div>
+                <?php
+            }
+        } else {
+            echo "No blogs found.";
+        }
+        ?>
+    </section>
+
+    <!-- Your footer section -->
+</body>
+</html>
